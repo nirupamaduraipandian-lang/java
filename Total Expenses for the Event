@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter branding expenses");
+        int branding = sc.nextInt();
+
+        System.out.println("Enter travel expenses");
+        int travel = sc.nextInt();
+
+        System.out.println("Enter food expenses");
+        int food = sc.nextInt();
+
+        System.out.println("Enter logistics expenses");
+        int logistics = sc.nextInt();
+
+        double total = branding + travel + food + logistics;
+
+        System.out.printf("Total expenses : Rs.%.2f\n", total);
+        System.out.printf("Branding expenses percentage : %.2f%%\n", (branding / total) * 100);
+        System.out.printf("Travel expenses percentage : %.2f%%\n", (travel / total) * 100);
+        System.out.printf("Food expenses percentage : %.2f%%\n", (food / total) * 100);
+        System.out.printf("Logistics expenses percentage : %.2f%%", (logistics / total) * 100);
+
+        sc.close();
+    }
+}
