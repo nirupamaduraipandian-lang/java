@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int maxLeftover = -1;
+        int packSize = 1;
+
+        for (int a = 1; a <= n; a++) {
+            int leftover = n % a;
+
+            if (leftover > maxLeftover || (leftover == maxLeftover && a > packSize)) {
+                maxLeftover = leftover;
+                packSize = a;
+            }
+        }
+
+        System.out.println(packSize);
+
+        sc.close();
+    }
+}
