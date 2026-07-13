@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the side of the square hall");
+        int y = sc.nextInt();
+
+        System.out.println("Enter the side of the square table placed for display");
+        int x = sc.nextInt();
+
+        int area = (y * y) - (x * x);
+
+        System.out.println("Area to be decorated is " + area);
+
+        sc.close();
+    }
+}
