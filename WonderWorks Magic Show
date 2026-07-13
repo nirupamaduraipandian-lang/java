@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the number of people who watched show 1");
+        int p1 = sc.nextInt();
+
+        System.out.println("Enter the average rating for show 1");
+        float r1 = sc.nextFloat();
+
+        System.out.println("Enter the number of people who watched show 2");
+        int p2 = sc.nextInt();
+
+        System.out.println("Enter the average rating for show 2");
+        float r2 = sc.nextFloat();
+
+        System.out.println("Enter the number of people who watched show 3");
+        int p3 = sc.nextInt();
+
+        System.out.println("Enter the average rating for show 3");
+        float r3 = sc.nextFloat();
+
+        double overall = ((p1 * r1) + (p2 * r2) + (p3 * r3)) / (double)(p1 + p2 + p3);
+
+        System.out.printf("The overall average rating for the show is %.2f", overall);
+
+        sc.close();
+    }
+}
