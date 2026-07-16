@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int hurl = sc.nextInt();
+        int spin = sc.nextInt();
+        int speed = sc.nextInt();
+
+        boolean c1 = hurl > 50;
+        boolean c2 = spin > 60;
+        boolean c3 = speed > 100;
+
+        if (c1 && c2 && c3) {
+            System.out.println(10);
+        } else if (c1 && c2) {
+            System.out.println(9);
+        } else if (c2 && c3) {
+            System.out.println(8);
+        } else if (c1 && c3) {
+            System.out.println(7);
+        } else if (c1 || c2 || c3) {
+            System.out.println(6);
+        } else {
+            System.out.println(5);
+        }
+
+        sc.close();
+    }
+}
