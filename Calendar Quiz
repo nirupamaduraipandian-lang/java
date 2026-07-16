@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static boolean isLeap(int year) {
+        return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int year = sc.nextInt();
+
+        String[] days = {
+            "Monday", "Tuesday", "Wednesday",
+            "Thursday", "Friday", "Saturday", "Sunday"
+        };
+
+        int totalDays = 0;
+
+        if (year >= 2001) {
+            for (int i = 2001; i < year; i++) {
+                totalDays += isLeap(i) ? 366 : 365;
+            }
+            System.out.println(days[totalDays % 7]);
+        } else {
+            for (int i = year; i < 2001; i++) {
+                totalDays += isLeap(i) ? 366 : 365;
+            }
+            int index = ((7 - (totalDays % 7)) % 7);
+            System.out.println(days[index]);
+        }
+
+        sc.close();
+    }
+}
