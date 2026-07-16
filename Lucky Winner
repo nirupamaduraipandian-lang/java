@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int ticket = sc.nextInt();
+        int lastDigit = ticket % 10;
+
+        if (lastDigit == 3 || lastDigit == 8) {
+            System.out.println("Lucky Winner");
+        } else {
+            System.out.println("Not a Lucky Winner");
+        }
+
+        sc.close();
+    }
+}
