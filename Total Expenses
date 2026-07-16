@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int ticketCost = sc.nextInt();
+        int tickets = sc.nextInt();
+
+        double total = ticketCost * tickets;
+        double discount = 0;
+
+        if (tickets >= 50 && tickets <= 100) {
+            discount = 0.10;
+        } else if (tickets >= 101 && tickets <= 200) {
+            discount = 0.20;
+        } else if (tickets >= 201 && tickets <= 400) {
+            discount = 0.30;
+        } else if (tickets >= 401 && tickets <= 500) {
+            discount = 0.40;
+        } else if (tickets > 500) {
+            discount = 0.50;
+        }
+
+        total = total - (total * discount);
+
+        System.out.printf("%.2f", total);
+
+        sc.close();
+    }
+}
